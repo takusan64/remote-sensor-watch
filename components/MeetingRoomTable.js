@@ -8,11 +8,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-const rooms = [
-  { name: "会議室A", isEmpty: true },
-  { name: "会議室B", isEmpty: false }
-]
-
 const fetcher = async url => {
   const res = await fetch(url)
   if (!res.ok) {
@@ -26,7 +21,7 @@ const fetcher = async url => {
 
 
 const MeetingRoomTable = () => {
-  const { data, error } = useSWR('/api/test', fetcher, { refreshInterval: 10000 })
+  const { data, error } = useSWR('/api/sensor', fetcher, { refreshInterval: 10000 })
 
   return (
     <TableContainer sx={{ mt: 2 }} component={Paper}>
