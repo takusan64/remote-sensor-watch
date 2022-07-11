@@ -1,26 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { CssBaseline, Container } from '@mui/material';
 
-import { Stack, Button } from '@mui/material'
+import Header from '../components/Header';
+import MeetingRoomTable from '../components/MeetingRoomTable';
 
-const Home = () => {
+const App = () => {
+
   return (
-    <div className={styles.container}>
-      ...
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <Stack spacing={2} direction="row">
-          <Button variant="text">Text</Button>
-          <Button variant="contained">Contained</Button>
-          <Button variant="outlined">Outlined</Button>
-        </Stack>
-      </main>
-    </div>
-  )
-}
-
-export default Home
+    <>
+      <CssBaseline />
+      <Header />
+      <Container maxWidth="xl">
+        <MeetingRoomTable />
+      </Container>
+    </>
+  );
+};
+export default App;

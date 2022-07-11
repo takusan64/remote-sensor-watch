@@ -2,8 +2,6 @@ import sys
 import binascii
 from bluepy.btle import Scanner, DefaultDelegate
 
-macaddr = 'ce:6d:0d:47:69:21'
-
 class ScanDelegate( DefaultDelegate ):
   def __init__( self ):
     DefaultDelegate.__init__( self )
